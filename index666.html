@@ -121,21 +121,33 @@
             font-size: 14px;
         }
         
-        /* 新增版权样式 */
-        .copyright {
-            margin-top: 15px;
-            color: #777;
+        /* 底部备案：居中、小字、压缩行距 */
+        .copyright-wrap {
+            margin-top: 18px;
+            color: #666;
             font-size: 12px;
-            padding-top: 15px;
+            line-height: 1.2; /* 压缩文字内部行高 */
+            padding-top: 12px; /* 缩小分割线上留白 */
             border-top: 1px solid #eee;
+            text-align: center;
         }
-        
-        .copyright a {
+        .copyright-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px 0; /* 大幅缩小行间距，原8px改为4px */
+            gap: 10px;
+        }
+        .copyright-item img {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+        .copyright-item a {
             color: #007bff;
             text-decoration: none;
         }
-        
-        .copyright a:hover {
+        .copyright-item a:hover {
             text-decoration: underline;
         }
 
@@ -156,6 +168,18 @@
             .btn {
                 padding: 12px 25px;
                 font-size: 14px;
+            }
+            .copyright-wrap {
+                font-size: 11px;
+                padding-top: 10px;
+            }
+            .copyright-item {
+                gap: 6px;
+                margin: 3px 0; /* 手机端行距更小 */
+            }
+            .copyright-item img {
+                width: 26px;
+                height: 26px;
             }
         }
     </style>
@@ -190,9 +214,20 @@
             <p>请文明停车，方便他人</p>
         </div>
         
-        <!-- 调整后的版权说明区域 -->
-        <div class="copyright">
-            <p>© 2026 <a href="http://ybkej.cn/" target="_blank">炎冰网络科技工作室</a> 版权所有</p>
+        <!-- 居中紧凑备案页脚 -->
+        <div class="copyright-wrap">
+            <div class="copyright-item">
+                <img src="https://cdn.jsdelivr.net/gh/a1504532590/iptv@main/logo-copyright.png" alt="版权图标">
+                <span>© <a href="http://ybkej.cn/" target="_blank">炎冰网络科技工作室</a>版权所有</span>
+            </div>
+            <div class="copyright-item">
+                <img src="https://cdn.jsdelivr.net/gh/a1504532590/iptv@main/logo-police.png" alt="公安备案图标">
+                <span>闽公网安备35021202000533号</span>
+            </div>
+            <div class="copyright-item">
+                <img src="https://cdn.jsdelivr.net/gh/a1504532590/iptv@main/logo-icp.png" alt="ICP备案图标">
+                <span>闽ICP备2022006016号</span>
+            </div>
         </div>
     </div>
 
@@ -203,10 +238,10 @@
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
-                    appToken: "AT_ick7daOASrvZWSTUFB99tOBoXKzsuuR9", //这里替换应用的APP_TOKEN
+                    appToken: "AT_ick7daOASrvZWSTUFB99tOBoXKzsuuR9",
                     content: "您好，有人需要您挪车，请及时处理。",
                     contentType: 1,
-                    uids: ["UID_5YMOAtgYAGflT28tMh2ZwW4qC9tu",] //这里替换用户UID，格式为：["UID1","UID2","UID3",...]
+                    uids: ["UID_5YMOAtgYAGflT28tMh2ZwW4qC9tu",]
                 })
             })
             .then(response => response.json())
@@ -249,10 +284,8 @@
         function updateContent() {
             const { plate, phone } = getUrlParams();
             
-            // 更新车牌号
             document.getElementById('licensePlate').textContent = plate;
             
-            // 更新电话号码
             const callBtn = document.querySelector('.btn-call');
             const smsBtn = document.querySelector('.btn-sms');
             
@@ -260,10 +293,9 @@
             smsBtn.href = `sms:${phone}`;
         }
 
-        // 添加点击统计（可选）
+        // 点击统计
         function trackClick(action) {
             console.log(`用户点击了: ${action}`);
-            // 这里可以添加统计代码
         }
 
         // 页面加载完成后执行
@@ -271,13 +303,11 @@
             detectDevice();
             updateContent();
             
-            // 微信按钮点击事件
             document.getElementById('wechatBtn').addEventListener('click', function() {
                 trackClick('微信联系');
                 notifyOwner();
             });
             
-            // 为按钮添加点击事件
             document.querySelector('.btn-call').addEventListener('click', function() {
                 trackClick('拨打电话');
             });
@@ -287,7 +317,7 @@
             });
         });
 
-        // 支持键盘快捷键
+        // 键盘快捷键
         document.addEventListener('keydown', function(e) {
             if (e.key === '0') {
                 document.getElementById('wechatBtn').click();
