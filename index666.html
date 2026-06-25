@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
     <style>
-        /* 本地仓库字体，无外部CDN，iPhone不会拦截 */
-        @font-face {
-            font-family: LXGWKai;
-            src: url(./LXGWWenKai-Regular.woff2) format("woff2");
-            font-display: swap;
-            font-weight: 400;
-        }
-
+        /* 删除所有本地字体@font-face，不再需要上传字体文件，杜绝404 */
         * {
             margin: 0;
             padding: 0;
@@ -24,8 +17,10 @@
         }
 
         body {
-            font-family: "LXGWKai", "STKaiti SC", "STKaiti", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", sans-serif;
+            /* 精准适配全平台华文楷体优先级，iPhone优先STKaiti SC苹果原生楷体 */
+            font-family: "STKaiti SC", "STKaiti", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", sans-serif;
             font-weight: 400;
+            /* iPhone字体抗锯齿，消除字体发虚、生硬 */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
