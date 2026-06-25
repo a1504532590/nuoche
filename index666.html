@@ -5,28 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
     <style>
-        /* 引入全网通用卡通可爱字体：站酷快乐体 WOFF2 轻量字体 */
-        @font-face {
-            font-family: ZKHappy;
-            src: url(https://cdn.jsdelivr.net/gh/chengyangfu/font-cdn/ZCOOLKuaiLe-Regular.woff2) format("woff2");
-            font-display: swap; /* 加载期间先显示默认文字，不空白 */
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            font-size: 16px;
-        }
-
         body {
-            /* 优先卡通字体，多层兜底，全设备兼容 */
-            font-family: "ZKHappy", system-ui, -apple-system, sans-serif;
-            font-weight: 400;
-            /* iPhone字体平滑，消除发虚、生硬 */
+            /* 华文楷体完整兼容栈，iPhone优先STKaiti SC */
+            font-family: "STKaiti SC", "STKaiti", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -51,7 +38,7 @@
             color: #333;
             font-size: 28px;
             margin-bottom: 10px;
-            font-weight: normal;
+            font-weight: bold;
         }
 
         .subtitle {
@@ -67,6 +54,7 @@
             padding: 20px;
             margin: 30px 0;
             font-size: 24px;
+            font-weight: bold;
             color: #007bff;
             letter-spacing: 2px;
             box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
@@ -84,6 +72,7 @@
             border: none;
             border-radius: 50px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -167,9 +156,6 @@
         }
 
         @media (max-width: 480px) {
-            html {
-                font-size: 14px;
-            }
             .container {
                 padding: 30px 20px;
             }
@@ -311,6 +297,11 @@
             smsBtn.href = `sms:${phone}`;
         }
 
+        // 点击统计
+        function trackClick(action) {
+            console.log(`用户点击了: ${action}`);
+        }
+
         // 页面加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             detectDevice();
@@ -340,11 +331,6 @@
                 document.querySelector('.btn-sms').click();
             }
         });
-
-        // 点击统计
-        function trackClick(action) {
-            console.log(`用户点击了: ${action}`);
-        }
     </script>
 </body>
 </html>
