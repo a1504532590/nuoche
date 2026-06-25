@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
     <style>
-        /* 引入在线霞鹜文楷，全网通用楷体 */
-        @font-face {
-            font-family: WenKai;
-            src: url(https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/fonts/LXGWWenKai-Regular.woff2) format("woff2");
-            font-display: swap;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +12,8 @@
         }
 
         body {
-            /* 优先使用在线楷体，兜底系统字体 */
-            font-family: "WenKai", "STKaiti SC", "STKaiti", "KaiTi", "楷体", system-ui, sans-serif;
+            /* 同步 ybkj.net 同款思源宋体，全设备原生自带，iPhone完美渲染 */
+            font-family: "Noto Serif SC", system-ui, -apple-system, serif, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
