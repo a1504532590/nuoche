@@ -121,13 +121,14 @@
             font-size: 14px;
         }
         
-        /* 底部备案：居中、小字、压缩行距 */
+        /* 底部备案：居中、小字、压缩行距、底部留白 */
         .copyright-wrap {
             margin-top: 18px;
-            color: #666;
+            margin-bottom: 12px;
+            color: #555;
             font-size: 12px;
-            line-height: 1.2; /* 压缩文字内部行高 */
-            padding-top: 12px; /* 缩小分割线上留白 */
+            line-height: 1.2;
+            padding-top: 12px;
             border-top: 1px solid #eee;
             text-align: center;
         }
@@ -135,7 +136,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 4px 0; /* 大幅缩小行间距，原8px改为4px */
+            margin: 4px 0;
             gap: 10px;
         }
         .copyright-item img {
@@ -175,7 +176,7 @@
             }
             .copyright-item {
                 gap: 6px;
-                margin: 3px 0; /* 手机端行距更小 */
+                margin: 3px 0;
             }
             .copyright-item img {
                 width: 26px;
@@ -214,19 +215,19 @@
             <p>请文明停车，方便他人</p>
         </div>
         
-        <!-- 居中紧凑备案页脚 -->
+        <!-- 图片使用jsdelivr CDN代理加速，国内稳定加载 -->
         <div class="copyright-wrap">
             <div class="copyright-item">
-                <img src="https://che.yanbing.ltd/logo.png">
-                <span>© <a href="http://ybkej.cn/" target="_blank">炎冰网络科技工作室</a>版权所有</span>
+                <img src="https://cdn.jsdelivr.net/gh/yanbingltd/yanbingltd.github.io/logo.png" alt="版权图标" loading="lazy">
+                <span>© <a href="https://ybkej.cn/" target="_blank" rel="noopener noreferrer">炎冰网络科技工作室</a>版权所有</span>
             </div>
             <div class="copyright-item">
-                <img src="https://che.yanbing.ltd/gongan.png">
-                <span>闽公网安备35021202000533号</span>
+                <img src="https://cdn.jsdelivr.net/gh/yanbingltd/yanbingltd.github.io/gongan.png" alt="公安备案图标" loading="lazy">
+                <span><a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">闽公网安备35021202000533号</a></span>
             </div>
             <div class="copyright-item">
-                <img src="https://che.yanbing.ltd/icp.png">
-                <span>闽ICP备2022006016号</span>
+                <img src="https://cdn.jsdelivr.net/gh/yanbingltd/yanbingltd.github.io/icp.png" alt="ICP备案图标" loading="lazy">
+                <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备2022006016号</a></span>
             </div>
         </div>
     </div>
