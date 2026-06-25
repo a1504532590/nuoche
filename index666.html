@@ -12,8 +12,11 @@
         }
 
         body {
-            /* 全平台兼容楷体字体栈 */
-            font-family: "KaiTi", "楷体", "STKaiti", "SimSun", sans-serif;
+            /* 全平台楷体优先级，iPhone优先识别STKaiti SC华文楷体 */
+            font-family: "STKaiti SC", "STKaiti", "KaiTi", "楷体", "SimSun", system-ui, -apple-system, sans-serif;
+            /* iPhone字体平滑渲染，解决发虚、黑体替代问题 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
