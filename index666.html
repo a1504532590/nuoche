@@ -24,7 +24,7 @@
         .container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             padding: 40px;
             text-align: center;
             max-width: 400px;
@@ -47,7 +47,7 @@
         .license-plate {
             background: #f8f9fa;
             border: 3px solid #007bff;
-            border-radius 10px;
+            border-radius: 10px;
             padding: 20px;
             margin: 30px 0;
             font-size: 24px;
@@ -139,8 +139,9 @@
             margin: 4px 0;
             gap: 10px;
         }
-        .copyright-emoji {
-            font-size: 26px;
+        .copyright-item img {
+            width: 32px;
+            height: 32px;
             flex-shrink: 0;
         }
         .copyright-item a {
@@ -177,8 +178,9 @@
                 gap: 6px;
                 margin: 3px 0;
             }
-            .copyright-emoji {
-                font-size: 22px;
+            .copyright-item img {
+                width: 26px;
+                height: 26px;
             }
         }
     </style>
@@ -192,7 +194,7 @@
             闽C 75WG6
         </div>
         
-        <div class="action-buttons">
+        <div class="action-buttons>
             <button class="btn btn-wechat" id="wechatBtn">
                 <span class="icon">💬</span>
                 微信联系车主
@@ -213,18 +215,18 @@
             <p>请文明停车，方便他人</p>
         </div>
         
-        <!-- 完全删除外部图片链接，无代理、无外链图片，Emoji永久显示 -->
+        <!-- 使用仓库根目录相对路径图片，无需外部代理 -->
         <div class="copyright-wrap">
             <div class="copyright-item">
-                <span class="copyright-emoji">📜</span>
+                <img src="./logo.png" alt="版权图标" loading="lazy">
                 <span>© <a href="https://ybkej.cn/" target="_blank" rel="noopener noreferrer">炎冰网络科技工作室</a>版权所有</span>
             </div>
             <div class="copyright-item">
-                <span class="copyright-emoji">👮</span>
+                <img src="./gongan.png" alt="公安备案图标" loading="lazy">
                 <span><a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">闽公网安备35021202000533号</a></span>
             </div>
             <div class="copyright-item">
-                <span class="copyright-emoji">🌐</span>
+                <img src="./icp.png" alt="ICP备案图标" loading="lazy">
                 <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备2022006016号</a></span>
             </div>
         </div>
