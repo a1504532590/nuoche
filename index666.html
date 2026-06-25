@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
+    <!-- 引入和ybkj.net一模一样的思源宋体字体源 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,8 +16,8 @@
         }
 
         body {
-            /* 同步 ybkj.net 同款思源宋体，全设备原生自带，iPhone完美渲染 */
-            font-family: "Noto Serif SC", system-ui, -apple-system, serif, sans-serif;
+            /* 和ybkj.net完全一致字体顺序 */
+            font-family: "Noto Serif SC", serif, system-ui, -apple-system, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -38,13 +42,14 @@
             color: #333;
             font-size: 28px;
             margin-bottom: 10px;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .subtitle {
             color: #666;
             font-size: 16px;
             margin-bottom: 30px;
+            font-weight: 400;
         }
 
         .license-plate {
@@ -54,7 +59,7 @@
             padding: 20px;
             margin: 30px 0;
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
             color: #007bff;
             letter-spacing: 2px;
             box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
@@ -72,7 +77,7 @@
             border: none;
             border-radius: 50px;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
