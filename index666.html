@@ -212,7 +212,7 @@
             font-size: 15px;
         }
 
-        /* 备案版权区域玻璃分割 */
+        /* 备案版权区域 移除毛玻璃效果 */
         .copyright-wrap {
             margin-top: 24px;
             color: #666666;
@@ -220,15 +220,16 @@
             padding-top: 20px;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
             line-height: 1.6;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            /* 删除毛玻璃模糊 */
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
         }
         .copyright-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 8px 0;
-            gap: 10px;
+            margin: 6px 0;
+            gap: 8px;
         }
         .copyright-item img {
             width: 32px;
@@ -318,7 +319,7 @@
             .license-plate { padding: 22px 12px; border-radius: 18px; }
             .btn { padding: 15px 20px; width: 100%; min-width: unset; font-size: 16px; }
             .copyright-wrap { font-size: 12px; padding-top: 18px; }
-            .copyright-item { gap: 6px; margin: 6px 0; }
+            .copyright-item { gap: 6px; margin: 5px 0; }
             .copyright-item img { width: 26px; height: 26px; }
             .modal-box { width: 86%; padding: 30px 20px; }
         }
