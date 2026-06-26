@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
+    <!-- 国内稳定CDN引入思源宋体，全设备强制统一仿宋质感字体 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/noto-serif-sc/2.007/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -15,10 +17,13 @@
             font-size: 16px;
         }
 
-        body {
-            /* 全平台仿宋字体栈，iPhone优先STFangsong SC苹果原生仿宋 */
-            font-family: "STFangsong SC", "STFangsong", "FangSong", "仿宋", "PingFang SC", "Microsoft YaHei", serif;
+        /* 全局强制全部文字使用思源仿宋，页面所有标签继承 */
+        body, h1, p, div, span, button, a {
+            font-family: "Noto Serif SC", serif;
             font-weight: 400;
+        }
+
+        body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
