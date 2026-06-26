@@ -16,10 +16,9 @@
         }
 
         body {
-            /* 苹果专用华文楷体前置，iOS优先调用STKaiti SC */
-            font-family: "STKaiti SC", "STKaiti", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", sans-serif;
+            /* 全平台仿宋字体栈，iPhone优先STFangsong SC苹果原生仿宋 */
+            font-family: "STFangsong SC", "STFangsong", "FangSong", "仿宋", "PingFang SC", "Microsoft YaHei", serif;
             font-weight: 400;
-            /* 苹果专属字体抗锯齿，解决iPhone字体粗、发虚、生硬 */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
