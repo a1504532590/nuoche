@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 霞鹜文楷免费商用楷体字体 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     <style>
         * {
             margin: 0;
@@ -13,10 +17,19 @@
         html {
             font-size: 16px;
         }
-        /* 全局所有标签强制仿宋字体，无遗漏 */
-        body, h1, p, div, span, button, a {
-            font-family: "STFangsong SC", "STFangsong", "FangSong", "仿宋", "PingFang SC", "Microsoft YaHei", serif;
+        /* 全局所有文字强制霞鹜文楷（复刻官网字体规则） */
+        body, p, div, span, li, a, h1, h2, h3, h4, h5, h6, input, textarea, button {
+            font-family: "LXGW WenKai", "STKaiti SC", "STKaiti", "KaiTi", "楷体", serif !important;
             font-weight: 400;
+        }
+        /* 保护图标字体，避免楷体覆盖图标 */
+        .fas, .far, .fal {
+            font-family: "Font Awesome 6 Free" !important;
+            font-weight: 900 !important;
+        }
+        .fab {
+            font-family: "Font Awesome 6 Brands" !important;
+            font-weight: 400 !important;
         }
         body {
             -webkit-font-smoothing: antialiased;
