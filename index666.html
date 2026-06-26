@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>挪车二维码</title>
-    <!-- 国内稳定CDN引入思源宋体，全设备强制统一仿宋质感字体 -->
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/noto-serif-sc/2.007/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             font-size: 16px;
         }
-
-        /* 全局强制全部文字使用思源仿宋，页面所有标签继承 */
+        /* 全局所有标签强制仿宋字体，无遗漏 */
         body, h1, p, div, span, button, a {
-            font-family: "Noto Serif SC", serif;
+            font-family: "STFangsong SC", "STFangsong", "FangSong", "仿宋", "PingFang SC", "Microsoft YaHei", serif;
             font-weight: 400;
         }
-
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -33,7 +28,6 @@
             justify-content: center;
             padding: 20px;
         }
-
         .container {
             background: white;
             border-radius: 20px;
@@ -43,20 +37,17 @@
             max-width: 400px;
             width: 100%;
         }
-
         .title {
             color: #333;
             font-size: 28px;
             margin-bottom: 10px;
             font-weight: 700;
         }
-
         .subtitle {
             color: #666;
             font-size: 16px;
             margin-bottom: 30px;
         }
-
         .license-plate {
             background: #f8f9fa;
             border: 3px solid #007bff;
@@ -69,14 +60,12 @@
             letter-spacing: 2px;
             box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
         }
-
         .action-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin-top: 30px;
         }
-
         .btn {
             padding: 15px 30px;
             border: none;
@@ -89,51 +78,42 @@
             display: inline-block;
             min-width: 200px;
         }
-
         .btn-wechat {
             background: linear-gradient(45deg, #07C160, #069F50);
             color: white;
             box-shadow: 0 4px 15px rgba(7, 193, 96, 0.3);
         }
-
         .btn-wechat:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(7, 193, 96, 0.4);
         }
-
         .btn-call {
             background: linear-gradient(45deg, #28a745, #20c997);
             color: white;
             box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
         }
-
         .btn-call:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
         }
-
         .btn-sms {
             background: linear-gradient(45deg, #17a2b8, #6f42c1);
             color: white;
             box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
         }
-
         .btn-sms:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
         }
-
         .icon {
             margin-right: 8px;
             font-size: 18px;
         }
-
         .footer {
             margin-top: 30px;
             color: #999;
             font-size: 14px;
         }
-        
         .copyright-wrap {
             margin-top: 18px;
             margin-bottom: 12px;
@@ -163,37 +143,15 @@
         .copyright-item a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 480px) {
-            html {
-                font-size: 14px;
-            }
-            .container {
-                padding: 30px 20px;
-            }
-            .title {
-                font-size: 24px;
-            }
-            .license-plate {
-                font-size: 20px;
-                padding: 15px;
-            }
-            .btn {
-                padding: 12px 25px;
-                font-size: 14px;
-            }
-            .copyright-wrap {
-                font-size: 11px;
-                padding-top: 10px;
-            }
-            .copyright-item {
-                gap: 6px;
-                margin: 3px 0;
-            }
-            .copyright-item img {
-                width: 26px;
-                height: 26px;
-            }
+            html {font-size: 14px;}
+            .container {padding: 30px 20px;}
+            .title {font-size: 24px;}
+            .license-plate {font-size: 20px;padding: 15px;}
+            .btn {padding: 12px 25px;font-size: 14px;}
+            .copyright-wrap {font-size: 11px;padding-top: 10px;}
+            .copyright-item {gap: 6px;margin: 3px 0;}
+            .copyright-item img {width: 26px;height: 26px;}
         }
     </style>
 </head>
@@ -201,32 +159,19 @@
     <div class="container">
         <h1 class="title">🚗 挪车二维码</h1>
         <p class="subtitle">请车主尽快挪车</p>
-        
-        <div class="license-plate" id="licensePlate">
-            闽C 75WG6
-        </div>
-        
+        <div class="license-plate" id="licensePlate">闽C 75WG6</div>
         <div class="action-buttons">
             <button class="btn btn-wechat" id="wechatBtn">
-                <span class="icon">💬</span>
-                微信联系车主
+                <span class="icon">💬</span>微信联系车主
             </button>
-            
             <a href="tel:17850505107" class="btn btn-call">
-                <span class="icon">📞</span>
-                一键拨打电话
+                <span class="icon">📞</span>一键拨打电话
             </a>
-            
             <a href="sms:17850505107" class="btn btn-sms">
-                <span class="icon">✉️</span>
-                一键发送短信
+                <span class="icon">✉️</span>一键发送短信
             </a>
         </div>
-        
-        <div class="footer">
-            <p>请文明停车，方便他人</p>
-        </div>
-        
+        <div class="footer"><p>请文明停车，方便他人</p></div>
         <div class="copyright-wrap">
             <div class="copyright-item">
                 <img src="./logo.png" alt="版权图标" loading="lazy">
@@ -242,7 +187,6 @@
             </div>
         </div>
     </div>
-
     <script>
         function notifyOwner() {
             fetch("https://wxpusher.zjiecode.com/api/send/message", {
@@ -254,75 +198,46 @@
                     contentType: 1,
                     uids: ["UID_5YMOAtgYAGflT28tMh2ZwW4qC9tu",]
                 })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.code === 1000) {
-                    alert("通知已发送！车主将通过微信收到提醒");
-                } else {
-                    alert("通知发送失败，请稍后重试。");
-                }
-            })
-            .catch(error => {
-                console.error("Error sending notification:", error);
+            }).then(res=>res.json()).then(d=>{
+                if(d.code===1000) alert("通知已发送！车主将通过微信收到提醒");
+                else alert("通知发送失败，请稍后重试。");
+            }).catch(e=>{
+                console.error(e);
                 alert("通知发送出错，请检查网络连接。");
             });
         }
-
-        function detectDevice() {
-            const userAgent = navigator.userAgent;
-            const isAndroid = /Android/i.test(userAgent);
-            const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-            if (isAndroid) {
-                document.body.style.background = 'linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)';
-            } else if (isIOS) {
-                document.body.style.background = 'linear-gradient(135deg, #007AFF 0%, #0051D5 100%)';
-            }
+        function detectDevice(){
+            const ua=navigator.userAgent;
+            const ios=/iPhone|iPad|iPod/.test(ua);
+            const android=/Android/.test(ua);
+            if(android) document.body.style.background="linear-gradient(135deg,#4CAF50 0%,#2E7D32 100%)";
+            else if(ios) document.body.style.background="linear-gradient(135deg,#007AFF 0%,#0051D5 100%)";
         }
-
-        function getUrlParams() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const plate = urlParams.get('plate') || '闽C 75WG6';
-            const phone = urlParams.get('phone') || '17850505107';
-            return { plate, phone };
+        function getUrlParams(){
+            const p=new URLSearchParams(window.location.search);
+            return {
+                plate:p.get("plate")||"闽C 75WG6",
+                phone:p.get("phone")||"17850505107"
+            };
         }
-
-        function updateContent() {
-            const { plate, phone } = getUrlParams();
-            document.getElementById('licensePlate').textContent = plate;
-            const callBtn = document.querySelector('.btn-call');
-            const smsBtn = document.querySelector('.btn-sms');
-            callBtn.href = `tel:${phone}`;
-            smsBtn.href = `sms:${phone}`;
+        function updateContent(){
+            const {plate,phone}=getUrlParams();
+            document.getElementById("licensePlate").textContent=plate;
+            document.querySelector(".btn-call").href=`tel:${phone}`;
+            document.querySelector(".btn-sms").href=`sms:${phone}`;
         }
-
-        function trackClick(action) {
-            console.log(`用户点击了: ${action}`);
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
+        function trackClick(action){console.log(`点击：${action}`);}
+        document.addEventListener("DOMContentLoaded",()=>{
             detectDevice();
             updateContent();
-            document.getElementById('wechatBtn').addEventListener('click', function() {
-                trackClick('微信联系');
-                notifyOwner();
-            });
-            document.querySelector('.btn-call').addEventListener('click', function() {
-                trackClick('拨打电话');
-            });
-            document.querySelector('.btn-sms').addEventListener('click', function() {
-                trackClick('发送短信');
-            });
+            document.getElementById("wechatBtn").addEventListener("click",()=>trackClick("微信联系")||notifyOwner());
+            document.querySelector(".btn-call").addEventListener("click",()=>trackClick("拨打电话"));
+            document.querySelector(".btn-sms").addEventListener("click",()=>trackClick("发送短信"));
         });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === '0') {
-                document.getElementById('wechatBtn').click();
-            } else if (e.key === '1') {
-                document.querySelector('.btn-call').click();
-            } else if (e.key === '2') {
-                document.querySelector('.btn-sms').click();
-            }
+        document.addEventListener("keydown",e=>{
+            if(e.key==="0") document.getElementById("wechatBtn").click();
+            else if(e.key==="1") document.querySelector(".btn-call").click();
+            else if(e.key==="2") document.querySelector(".btn-sms").click();
         });
     </script>
 </body>
