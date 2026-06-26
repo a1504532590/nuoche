@@ -90,14 +90,14 @@
         .container {
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.32);
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 36px;
             backdrop-filter: blur(24px) saturate(180%);
             -webkit-backdrop-filter: blur(24px) saturate(180%);
             box-shadow:
-                0 10px 40px rgba(0, 0, 0, 0.22),
-                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+                0 10px 40px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
             padding: 52px 36px;
             text-align: center;
             max-width: 430px;
@@ -105,16 +105,16 @@
         }
 
         .title {
-            color: #ffffff;
+            color: #111111;
             font-size: 32px;
             margin-bottom: 14px;
             font-weight: 700;
             letter-spacing: 1px;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+            text-shadow: none;
         }
 
         .subtitle {
-            color: rgba(255, 255, 255, 0.88);
+            color: #333333;
             font-size: 17px;
             margin-bottom: 38px;
             line-height: 1.55;
@@ -123,8 +123,8 @@
         /* 车牌外层毛玻璃容器 */
         .license-plate {
             position: relative;
-            background: rgba(255, 255, 255, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.38);
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.45);
             border-radius: 22px;
             padding: 28px 16px;
             margin: 36px 0;
@@ -132,8 +132,8 @@
             -webkit-backdrop-filter: blur(20px) saturate(170%);
             box-shadow:
                 0 0 30px rgba(255, 255, 255, 0.08),
-                0 8px 28px rgba(0, 0, 0, 0.22),
-                inset 0 1px 0 rgba(255, 255, 255, 0.28);
+                0 8px 28px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
         /* 真实蓝色车牌底板 */
         .plate-inner {
@@ -142,7 +142,7 @@
             padding: 10px 24px;
             border-radius: 6px;
         }
-        /* 车牌白色文字 */
+        /* 车牌白色文字（唯一白色文字） */
         .plate-text {
             font-size: 32px;
             font-weight: 700;
@@ -157,11 +157,11 @@
             margin-top: 38px;
         }
 
-        /* iOS26 按钮液态玻璃 */
+        /* iOS26 按钮液态玻璃 黑字 */
         .btn {
             position: relative;
             padding: 17px 30px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 999px;
             font-size: 17px;
             font-weight: 600;
@@ -171,39 +171,39 @@
             display: inline-block;
             min-width: 230px;
             letter-spacing: 0.6px;
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
+            color: #111111;
+            background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(18px) saturate(170%);
             -webkit-backdrop-filter: blur(18px) saturate(170%);
             box-shadow:
-                0 6px 22px rgba(0, 0, 0, 0.18),
-                inset 0 1px 0 rgba(255, 255, 255, 0.22);
+                0 6px 22px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
         }
         .btn:hover {
             transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.55);
-            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             box-shadow:
-                0 12px 36px rgba(0, 0, 0, 0.28),
-                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+                0 12px 36px rgba(0, 0, 0, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
         }
         .btn-wechat {
-            border-color: rgba(12, 210, 104, 0.35);
+            border-color: rgba(12, 210, 104, 0.45);
         }
         .btn-wechat:hover {
-            background: rgba(12, 210, 104, 0.22);
+            background: rgba(12, 210, 104, 0.15);
         }
         .btn-call {
-            border-color: rgba(46, 184, 78, 0.35);
+            border-color: rgba(46, 184, 78, 0.45);
         }
         .btn-call:hover {
-            background: rgba(46, 184, 78, 0.22);
+            background: rgba(46, 184, 78, 0.15);
         }
         .btn-sms {
-            border-color: rgba(28, 176, 200, 0.35);
+            border-color: rgba(28, 176, 200, 0.45);
         }
         .btn-sms:hover {
-            background: rgba(28, 176, 200, 0.22);
+            background: rgba(28, 176, 200, 0.15);
         }
 
         .icon {
@@ -213,29 +213,92 @@
 
         .footer {
             margin-top: 40px;
-            color: rgba(255, 255, 255, 0.76);
+            color: #555555;
             font-size: 15px;
         }
 
         /* 版权区域玻璃分割 */
         .copyright {
             margin-top: 24px;
-            color: rgba(255, 255, 255, 0.68);
+            color: #666666;
             font-size: 13px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             line-height: 1.6;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
         .copyright a {
-            color: #ffffff;
+            color: #111111;
             text-decoration: none;
             transition: 0.25s;
         }
         .copyright a:hover {
             text-decoration: underline;
-            color: rgba(255, 255, 255, 0.96);
+            color: #0054b8;
+        }
+
+        /* 自定义弹窗遮罩层 */
+        .modal-mask {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .modal-mask.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* iOS26毛玻璃弹窗盒子 */
+        .modal-box {
+            width: 320px;
+            background: rgba(255, 255, 255, 0.32);
+            backdrop-filter: blur(26px) saturate(180%);
+            -webkit-backdrop-filter: blur(26px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 28px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow:
+                0 14px 45px rgba(0, 0, 0, 0.22),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.2,0.8,0.2,1);
+        }
+        .modal-mask.show .modal-box {
+            transform: scale(1);
+        }
+        .modal-icon {
+            font-size: 48px;
+            color: #009944;
+            margin-bottom: 16px;
+        }
+        .modal-text {
+            font-size: 18px;
+            color: #111;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .modal-btn {
+            padding: 12px 36px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 84, 184, 0.4);
+            background: rgba(0, 84, 184, 0.12);
+            color: #111;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .modal-btn:hover {
+            background: rgba(0, 84, 184, 0.22);
         }
 
         /* 移动端适配 */
@@ -247,10 +310,22 @@
             .license-plate { padding: 22px 12px; border-radius: 18px; }
             .btn { padding: 15px 20px; width: 100%; min-width: unset; font-size: 16px; }
             .copyright { font-size: 12px; }
+            .modal-box { width: 86%; padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
+    <!-- 弹窗遮罩 -->
+    <div class="modal-mask" id="modalMask">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="modal-text" id="modalText">通知已发送！车主将通过微信收到提醒</div>
+            <button class="modal-btn" id="modalCloseBtn">确定</button>
+        </div>
+    </div>
+
     <!-- 随机背景图案层 -->
     <div class="bg-pattern" id="bgPattern"></div>
 
@@ -258,7 +333,7 @@
         <h1 class="title">🚗 挪车二维码</h1>
         <p class="subtitle">如有占用车位，请联系车主及时挪车</p>
 
-        <!-- 修改车牌结构，内置蓝色底板 -->
+        <!-- 车牌区域 蓝底白字 -->
         <div class="license-plate" id="licensePlate">
             <div class="plate-inner">
                 <span class="plate-text" id="plateText">川G B9480</span>
@@ -290,6 +365,25 @@
     </div>
 
     <script>
+        // 弹窗元素
+        const modalMask = document.getElementById('modalMask');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        function showModal(text) {
+            document.getElementById('modalText').innerText = text;
+            modalMask.classList.add('show');
+            // 3秒自动关闭
+            setTimeout(()=>{
+                modalMask.classList.remove('show');
+            },3000)
+        }
+        modalCloseBtn.addEventListener('click',()=>{
+            modalMask.classList.remove('show');
+        })
+        // 点击遮罩关闭弹窗
+        modalMask.addEventListener('click',(e)=>{
+            if(e.target === modalMask) modalMask.classList.remove('show');
+        })
+
         // 随机背景渐变方案
         const gradients = [
             "linear-gradient(145deg, #5b74e8 0%, #9057d8 50%, #e28ef0 100%)",
@@ -342,7 +436,7 @@
             }
         }
 
-        // 微信通知车主函数
+        // 微信通知车主函数（替换alert为自定义弹窗）
         function notifyOwner() {
             fetch("https://wxpusher.zjiecode.com/api/send/message", {
                 method: "POST",
@@ -357,14 +451,14 @@
             .then(response => response.json())
             .then(data => {
                 if (data.code === 1000) {
-                    alert("通知已发送！车主将通过微信收到提醒");
+                    showModal("通知已发送！车主将通过微信收到提醒");
                 } else {
-                    alert("通知发送失败，请稍后重试。");
+                    showModal("通知发送失败，请稍后重试。");
                 }
             })
             .catch(error => {
                 console.error("Error sending notification:", error);
-                alert("通知发送出错，请检查网络连接。");
+                showModal("通知发送出错，请检查网络连接。");
             });
         }
 
